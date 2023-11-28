@@ -6,12 +6,28 @@ body {margin: 0;
     background-size: cover;
     background-position: center;
     font-family: 'Roboto', sans-serif; /* Adjust font family as needed */
-    color: #fff; /* Adjust text color */
+    color: #eccdae; /* Adjust text color */
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #registration-form label {
+    display: block;
+    margin-bottom: 10px; /* Adjust as needed for spacing between lines */
+  }
+
+  #registration-form input,
+  #registration-form select,
+  #registration-form textarea {
+    margin-bottom: 15px; /* Adjust as needed for spacing between lines */
+  }
+
+  section {
+    margin-top: 20px; /* Adjust as needed for spacing between sections */
   }
   
   header {
-    background-color: #fff(34, 34, 34, 0.8); /* Add some transparency to the header for better contrast with the background image */
-    color: #fff;
     padding: 20px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -23,6 +39,10 @@ body {margin: 0;
     text-align: center;
   }
   
+  .registration-form {
+
+  }
+
   .cta {
     background-color: #ff5722;
     color: #fff;
@@ -41,7 +61,8 @@ body {margin: 0;
   h1 {
     margin-bottom: 20px;
     color: #ff5722;
-    font-size: 100px;
+    font-size: 100px
+    text-align: center;
   }
   
   footer {
@@ -60,6 +81,7 @@ body {margin: 0;
     margin-bottom: 20px;
     color: #ff5722;
     font-size: 50px;
+    text-align: center;
   }
   
   p {
