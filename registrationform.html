@@ -5,64 +5,120 @@
   <meta charset="UTF-8">
   <title>Registration Form</title>
   <link rel="stylesheet" href="styles.css" />
+  
+  <style>
+    body {
+      background-image: url('pexels-li-sun-2294361.jpg');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      min-height: 100vh;
+    }
+
+    #content-container {
+      max-width: 500px;
+      margin: 20px;
+      box-sizing: border-box;
+    }
+
+    form {
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  
+    /* Media query for screens with a maximum width of 600 pixels */
+   @media only screen and (max-width: 600px) {
+     body {
+       font-size: 14px;
+     }
+
+     /* Additional styles for smaller screens */
+     /* ... */
+   }
+
+   /* Media query for screens with a maximum width of 400 pixels */
+   @media only screen and (max-width: 400px) {
+     body {
+       font-size: 12px;
+     }
+
+     /* Additional styles for even smaller screens */
+     /* ... */
+   }
+ </style>
 </head>
 
 <body>
-  <h1>Registration Form</h1>
-  <p>Please fill out this form with the required information</p>
+  <div id="content-container">
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
 
-  <form id="registration-form" method="post" action='profile.html'>
-    <fieldset>
-      <label for="first-name">Enter Your First Name:
-        <input id="first-name" name="first-name" type="text" required />
-      </label>
-      <label for="last-name">Enter Your Last Name:
-        <input id="last-name" name="last-name" type="text" required />
-      </label>
-      <label for="email">Enter Your Email:
-        <input id="email" name="email" type="email" required />
-      </label>
-      <label for="password">Create a Password - lowercase and uppercase letters, digits, special characters
-        !@#$%^&*, and requires a minimum length of 8 characters:
-        <input id="password" name="password" type="password" pattern="[a-zA-Z0-9!@#$%^&*()_+]{8,}" required />
-      </label>
-    </fieldset>
+    <form id="registration-form" method="post" action='profile.html'>
+      <fieldset>
+        <label for="first-name">Enter Your First Name:
+          <input id="first-name" name="first-name" type="text" required />
+        </label>
+        <label for="last-name">Enter Your Last Name:
+          <input id="last-name" name="last-name" type="text" required />
+        </label>
+        <label for="email">Enter Your Email:
+          <input id="email" name="email" type="email" required />
+        </label>
+        <label for="password">Create a Password - lowercase and uppercase letters, digits, special characters<br>
+          !@#$%^&*, and requires a minimum length of 8 characters:
+          <input id="password" name="password" type="password" pattern="[a-zA-Z0-9!@#$%^&*\\(\\)_+]+" minlength="8" required />
+          <div id="password-error" style="color: red;"></div>
+        </label>
+      </fieldset>
 
-    <fieldset>
-      <label for="age">Input your age (years):
-        <input id="age" type="number" name="age" min="13" max="120" />
-      </label>
-      <label for="bio">Provide a bio:
-        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Enter a short bio here..."></textarea>
-      </label>
-    </fieldset>
+      <fieldset>
+        <label for="age">Input your age (years):
+          <input id="age" type="number" name="age" min="13" max="120" />
+        </label>
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Enter a short bio here..."></textarea>
+        </label>
+      </fieldset>
 
-    <section>
-      <h2>BMI Calculator</h2>
-      <p>Enter your weight (in pounds) and height (in feet and inches) to calculate your BMI:</p>
+      <fieldset>
+        <p>BMI (Body Mass Index) Calculator: Enter your weight (in pounds) and height (in feet and inches) to calculate your BMI:</p>
 
-      <!-- Input fields for weight and height -->
-      <label for="weight">Weight (lbs):
-        <input type="text" id="weight" placeholder="Enter weight">
-      </label>
-      <label for="feet">Height (feet):
-        <input type="text" id="feet" placeholder="Enter feet">
-      </label>
-      <label for="inches">Height (inches):
-        <input type="text" id="inches" placeholder="Enter inches">
-      </label>
-    </section>
+        <!-- Input fields for weight and height -->
+        <label for="weight">Weight (lbs):
+          <input type="text" id="weight" placeholder="Enter weight">
+        </label>
+        <label for="feet">Height (feet):
+          <input type="text" id="feet" placeholder="Enter feet">
+        </label>
+        <label for="inches">Height (inches):
+          <input type="text" id="inches" placeholder="Enter inches">
+        </label>
+      </fieldset>
 
-    <label for="terms-and-conditions">
-      <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept
-      the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
-    </label>
-
-    <input type="submit" value="Submit" />
-  </form>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
 
   <!-- Link the external JavaScript file -->
   <script src="script.js"></script>
+
+<!-- Footer navigation menu -->
+<footer>
+  <nav>
+    <ul>
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+  </nav>
+</footer>
+
 </body>
 
 </html>

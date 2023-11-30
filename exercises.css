@@ -1,0 +1,80 @@
+
+body, h1, p, select {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color:rgb(240, 235, 229);
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+  }
+  
+  header {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ffffffe9; /* Adjust text color */
+  }
+  
+  #body-part-dropdown {
+    margin: 10px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  #exercise-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .exercise-card {
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.exercise-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .exercise-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .exercise-card h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .exercise-card ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  /* Media query for screens with a maximum width of 600 pixels */
+@media only screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  
+    /* Additional styles for smaller screens */
+    /* ... */
+  }
+  
+  /* Media query for screens with a maximum width of 400 pixels */
+  @media only screen and (max-width: 400px) {
+    body {
+      font-size: 12px;
+    }
+  

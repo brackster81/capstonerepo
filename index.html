@@ -5,35 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Better Fitness</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Media query for screens with a maximum width of 600 pixels */
+       @media only screen and (max-width: 600px) {
+         body {
+           font-size: 14px;
+         }
+   
+         /* Additional styles for smaller screens */
+         /* ... */
+       }
+   
+       /* Media query for screens with a maximum width of 400 pixels */
+       @media only screen and (max-width: 400px) {
+         body {
+           font-size: 12px;
+         }
+   
+         /* Additional styles for even smaller screens */
+         /* ... */
+       }
+     </style>
 </head>
 
-<body>
-    <header>
+<body style="background-image: url('pexels-victor-freitas-841130.jpg'); background-size: cover; background-position: center;">
+   
+    <header class="fade-in">
         <h1>Better Fitness</h1>
         <p>Your journey to a healthier lifestyle starts here</p>
     </header>
 
-    <section>
+    <section class="fade-in">
         <h2>Welcome to Better Fitness</h2>
         <p>Transform your body, transform your life.</p>
     </section>
 
-    <section>
+    <section class="fade-in">
         <h2>Our Services</h2>
         <p>Discover our range of fitness programs tailored for your needs.</p>
         <!-- Add more content or features as needed -->
     </section>
 
-    <section id="cta">
+    <section id="cta" class="fade-in">
         <h2>Join Us Today!</h2>
         <p>Start your fitness journey with Better Fitness.</p>
         <a href="registrationform.html" class="cta">Sign Up Now</a>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Better Fitness. All rights reserved.</p>
-    </footer>
+    <section class="fade-in">
+        <h2>Sign up FREE before New Year's Day!!!</h2>
+        <p id="countdown"></p>
+    </section>
+
+    <script src="countdown.js"></script>
+    
+<!-- Footer navigation menu -->
+<footer>
+  <nav>
+    <ul>
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="registrationform.html">Registration</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="exercises.html">Exercises</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+  </nav>
+</footer>
+
 </body>
 
 </html>
+

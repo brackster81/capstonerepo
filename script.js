@@ -1,32 +1,47 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const registrationForm = document.getElementById('registration-form');
 
-function submitForm() {
-  // Get form values
-  const firstName = document.getElementById('first-name').value;
-  const lastName = document.getElementById('last-name').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const age = document.getElementById('age').value;
-  const bio = document.getElementById('bio').value;
-  const weight = document.getElementById('weight').value;
-  const feet = document.getElementById('feet').value;
-  const inches = document.getElementById('inches').value;
+  registrationForm.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting traditionally
 
-  // Create an object with form data
-  const formData = {
-    'first-name': firstName,
-    'last-name': lastName,
-    'email': email,
-    'password': password,
-    'age': age,
-    'bio': bio,
-    'weight': weight,
-    'feet': feet,
-    'inches': inches,
-  };
+    // Extract form data
+    const formData = {
+      'first-name': document.getElementById('first-name').value,
+      'last-name': document.getElementById('last-name').value,
+      'email': document.getElementById('email').value,
+      'password': document.getElementById('password').value,
+      'age': document.getElementById('age').value,
+      'bio': document.getElementById('bio').value,
+      'weight': document.getElementById('weight').value,
+      'feet': document.getElementById('feet').value,
+      'inches': document.getElementById('inches').value,
+    };
 
-  // Store the form data in local storage
-  localStorage.setItem('userProfile', JSON.stringify(formData));
+    // Save the form data to localStorage
+    localStorage.setItem('userProfile', JSON.stringify(formData));
 
-  // Redirect to the profile page
-  window.location.href = 'profile.html';
+    // Redirect to the profile page
+    window.location.href = 'profile.html';
+  });
+});
+function validatePassword() {
+  const passwordInput = document.getElementById('password');
+  const passwordError = document.getElementById('password-error');
+
+  if (passwordInput.checkValidity()) {
+    // Password meets the pattern requirements
+    passwordError.textContent = '';
+  } else {
+    // Password does not meet the pattern requirements
+    passwordError.textContent = 'Password must be at least 8 characters and include lowercase and uppercase letters, digits, and special characters.';
+  }
 }
+
+document.getElementById('registration-form').addEventListener('submit', function (event) {
+  validatePassword();
+
+  // Prevent form submission if password is invalid
+  if (!document.getElementById('password').checkValidity()) {
+    event.preventDefault();
+  }
+});
