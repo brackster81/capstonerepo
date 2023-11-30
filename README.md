@@ -2,6 +2,8 @@ Clone the whole repository, and start by opening up index.html
 
 This is a fitness website project. The goal is to help people meet their fitness needs.
 
+Also, implement the API key into where it needs to be in exercises.js.
+
 Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event):
 
 	- Countdown to the end of the year near the bottom of index.html,   	  calculated in countdown.js
